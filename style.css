@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Slackside+One&display=swap');
+
+:root{
+    --font1: "Slackside One", cursive; 
+    --font2: "Poppins", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--font1);
+    color: white;
+}
+
+body{
+    background: linear-gradient(61deg, rgba(28, 28, 29, 0.368) 0%, rgba(1, 1, 1, 0.264) 100%), url("https://images.unsplash.com/photo-1656608138197-2aea23cc3564?q=80&w=1977&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo{
+    width: 80px;
+}
+#logo{
+    width: 70%;
+    cursor: pointer;
+    transition: 2s;
+}
+#logo:hover{
+    transform: rotateY(360deg);
+    filter: drop-shadow(20px 10px 5px rgb(85, 85, 255));
+}
+
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+li{
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+li:hover {
+    filter: drop-shadow(0px 10px 10px white);
+}
+
+li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    transition: 500ms;
+    z-index: -1;
+    background-color: blue;
+}
+
+li:hover::after{
+    right: 0;
+}
+
+.icon-box{
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 5px white;
+}
+
+.icon-box i{
+    color: black;
+}
+
+/* Article */
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+.article {
+    width: 50%;
+    padding: 50px;
+}
+
+.article h1 {
+    font-size: 100px;
+    transition: 300ms;
+    display: inline-block;
+}
+
+.article h1:hover{
+    text-shadow: 10px 10px 10px rgb(84, 21, 201);
+}
+
+.article p{
+    font-size: 20px;
+}
+
+.article button {
+    background: rgb(25,99,161);
+    background: linear-gradient(90deg, rgba(25,99,161,1) 10%, rgba(0,212,255,1) 100%);
+    padding: 10px 25px;
+    font-family: var(--font2);
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Cards */
+.cards{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card{
+    position: relative;
+    width: calc(50% - 20px);
+    height: 300px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 -3px 15px rgba(255, 255, 255, 0.5);
+    transition: 600ms;
+}
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0px 15px rgba(75, 75, 255, 0.4);
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+}
+
+.card-desc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.card-desc p{
+    font-family: var(--font2);
+    font-size: 12px;
+}
